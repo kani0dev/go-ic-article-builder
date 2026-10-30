@@ -7,50 +7,13 @@ permitidos e gera um artigo `.qmd` a partir de um template embutido no
 binário. Nomes são comparados ignorando maiúsculas/minúsculas e espaços
 extras, então `Jhon Doe` e `jhon doe` viram um autor só.
 
-## Como rodar
-
-```bash
-cd src
-go run ./cmd/ic-article-builder new --help
-```
-
-Ou compile um binário:
-
-```bash
-cd src
-go build -o ic-article-builder ./cmd/ic-article-builder
-./ic-article-builder new --help
-```
-
 ## Configuração
 
 Copie o exemplo e edite:
 
-```bash
-cd src
-cp ic-factory.example.yaml ic-factory.yaml
-```
-
-```yaml
-authors:
-  - Jhon Doe
-  - Mac D. Duphing
-
-categories:
-  - estatística
-  - regressão
-
-# opcional: imagem padrão do front matter
-# image: exemplo.png
-```
-
-Todo `--author` e `--category` passado na linha de comando precisa existir
-nessa lista. A grafia do arquivo de configuração é a que vai para o `.qmd`.
-
-## Uso
 
 ```bash
-./ic-article-builder new \
+./article-builder new \
   --title "Análise de Regressão Linear" \
   --author "jhon doe" \
   --author "Mac D. Duphing" \
