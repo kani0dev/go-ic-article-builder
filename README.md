@@ -1,4 +1,5 @@
-# IC Article Factory
+# Alfred
+> ele ajuda a organizar o Quarto
 
 Fábrica de templates `.qmd` (Quarto) para os artigos da IC.
 
